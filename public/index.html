@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" dir="ltr" ng-app="RecipeApp">
+<html lang="en" dir="ltr" ng-app="RecipesApp">
   <head>
     <meta charset="utf-8">
     <title> Ultimate Recipe App</title>
@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body ng-controller="MainController as ctrl">
-    <h2>{{ ctrl.h4 }}</h2>
+  <body ng-controller = "MainController as ctrl">
+    <h2>{{ ctrl.h2 }}</h2>
     {{4 + 4}}
-    <form ng-repeat="">
+    <form ng-submit="ctrl.createRecipe()">
       <input ng-model="ctrl.createForm.name" type="text" name="Name" value="Name">
       <input type="text" name="Ingredients: " value="Ingredients">
     </form>

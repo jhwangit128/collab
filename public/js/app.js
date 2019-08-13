@@ -1,15 +1,14 @@
-<<<<<<< HEAD
 const app = angular.module('RecipesApp', [])
 
 app.controller('MainController', ['$http', function ($http) {
-  this.h2 = "Recipes!"
+  this.h2 = 'Jiha&Costa Recipe Project'
   this.createForm = {}
 
   this.createRecipe = () => {
     $http({
       method:'POST',
       url: '/recipes',
-      data: this.createFrom
+      data: this.createForm
     }).then((response) => {
       this.recipes.unshift(response.data)
       this.createForm = {}
@@ -29,14 +28,4 @@ app.controller('MainController', ['$http', function ($http) {
   }
 
   this.getRecipes()
-=======
-const app = angular.module('RecipeApp', [])
-
-app.controller('MainController', ['$http', function ($http) {
-  const ctrl = this
-  ctrl.h4 = 'Jiha&Costa Recipe Project'
-
-
-
->>>>>>> c3aedc5ede92c94242ba026e595c7a70896f2fb5
 }])
