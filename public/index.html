@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="RecipeApp">
+  <head>
+    <meta charset="utf-8">
+    <title> Ultimate Recipe App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js" charset="utf-8"></script>
+    <script src="/js/app.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body ng-controller="MainController as ctrl">
+    <h2>{{ ctrl.h4 }}</h2>
+    {{4 + 4}}
+    <form>
+      <input type="text" name="Name" value="Name">
+      <input type="text" name="Ingredients: " value="Ingredients">
+      <input type="checkbox" name="Yummy?" value="">
+    </form>
+  </body>
+</html>
