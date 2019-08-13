@@ -12,10 +12,13 @@
   <body ng-controller="MainController as ctrl">
     <h2>{{ ctrl.h4 }}</h2>
     {{4 + 4}}
-    <form>
-      <input type="text" name="Name" value="Name">
+    <form ng-repeat="">
+      <input ng-model="ctrl.createForm.name" type="text" name="Name" value="Name">
       <input type="text" name="Ingredients: " value="Ingredients">
       <input type="checkbox" name="Yummy?" value="">
     </form>
+
+
+
   </body>
 </html>
