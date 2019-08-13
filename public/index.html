@@ -20,7 +20,7 @@
       placeholder="Name">
 
       <input
-      ng-model="ctrl.createform.ingredients"
+      ng-model="ctrl.createForm.ingredients"
       type="text"
       name="Ingredients: "
       value="ngredients"
@@ -30,5 +30,16 @@
       value="Create a Recipe"
       >
     </form>
+    <table>
+       <tr ng-repeat="recipe in ctrl.recipes">
+         <td>
+            {{recipe.name}}
+             </td>
+         <td ng-click="ctrl.deleteRecipe( recipe._id )">X</td>
+       </tr>
+     </table>
+
+    <h5> Recipe and Ingredients </h5>
+      <h4>{{ctrl.recipe.name}}</h4>
   </body>
 </html>
