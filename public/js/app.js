@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const app = angular.module('RecipesApp', [])
 
 app.controller('MainController', ['$http', function ($http) {
@@ -28,4 +29,14 @@ app.controller('MainController', ['$http', function ($http) {
   }
 
   this.getRecipes()
+=======
+const app = angular.module('RecipeApp', [])
+
+app.controller('MainController', ['$http', function ($http) {
+  const ctrl = this
+  ctrl.h4 = 'Jiha&Costa Recipe Project'
+
+
+
+>>>>>>> c3aedc5ede92c94242ba026e595c7a70896f2fb5
 }])
