@@ -18,14 +18,15 @@ db.on('disconnected', () => console.log('mongo disconnected'))
 
 // Middleware
 app.use(express.json())
+app.use(express.static('public'))
 
 // Routes
 const recipesController = require('./controllers/recipeController.js')
 app.use('/recipes', recipesController)
 
-app.get('/', (req, res) => {
-  res.send('index file!! :)')
-})
+// app.get('/', (req, res) => {
+//   res.send('index file!! :)')
+// })
 
 app.listen(port, () => {
   console.log('welcome to port:' + port);
