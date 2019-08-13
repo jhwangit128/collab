@@ -20,7 +20,7 @@ db.on('disconnected', () => console.log('mongo disconnected'))
 app.use(express.json())
 
 // Routes
-const recipeController = require('./controllers/recipeController.js')
+const recipesController = require('./controllers/recipeController.js')
 app.use('/recipes', recipesController)
 
 app.get('/', (req, res) => {
