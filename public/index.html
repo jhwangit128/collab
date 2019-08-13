@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body ng-controller = "MainController as ctrl">
-    <h2>{{ ctrl.h2 }}</h2>
-    <form ng-submit="ctrl.createRecipe()">
-      <input type="text">
+  <body ng-controller="MainController as ctrl">
+    <h2>{{ ctrl.h4 }}</h2>
+    {{4 + 4}}
+    <form ng-repeat="">
+      <input ng-model="ctrl.createForm.name" type="text" name="Name" value="Name">
+      <input type="text" name="Ingredients: " value="Ingredients">
     </form>
   </body>
 </html>
