@@ -1,11 +1,9 @@
 const mongoose = require('mongoose')
 
-const recipeSchema = new mongoose.Schema({
-  name: {type: String, required: true },
-  Yummy: Boolean,
-  ingredients: String
+const recipeSchema = mongoose.Schema({
+  name: {type: String, required: true},
+  Yummy: {type: Boolean},
+  ingredients: {type: String}
 })
 
-const Cook = mongoose.model('food', recipeSchema)
-
-module.exports = Cook
+module.exports = mongoose.model('Recipe', recipeSchema)
