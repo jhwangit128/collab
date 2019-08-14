@@ -24,20 +24,28 @@
       type="text"
       placeholder="Ingredients: "
       >
+
+      <input
+      ng-model="ctrl.createForm.recipe"
+      type="text"
+      placeholder="Recipe: "
+      >
+
       <input type="submit"
       value="Create a Recipe"
       >
     </form>
     <table>
        <tr ng-repeat="recipe in ctrl.recipes">
-         <td>
+         <td ng-click="ctrl.chooseOneRecipe(recipe)">
             {{recipe.name}}
              </td>
          <td ng-click="ctrl.deleteRecipe( recipe._id )">X</td>
        </tr>
      </table>
-     <div class="">
-
+     <div class="recipe">
+       <h3>Recipe info:</h3>
+       <p>{{ ctrl.recipe.recipe }}</p>
      </div>
     <h5> Recipe and Ingredients </h5>
       <h4>{{ctrl.recipe.name}}</h4>
