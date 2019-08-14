@@ -4,6 +4,13 @@ const app = angular.module('RecipesApp', [])
 app.controller('MainController', ['$http', function ($http) {
   this.h2 = "Recipes!"
   this.createForm = {}
+  this.recipe = {}
+  this.recipes = []
+  
+  this.chooseOneRecipe = (recipe) => {
+    this.recipe = recipe
+    console.log(this.recipe.name)
+  }
 
   this.createRecipe = () => {
     $http({
