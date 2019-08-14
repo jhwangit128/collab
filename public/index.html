@@ -12,6 +12,7 @@
   </head>
   <body ng-controller="MainController as ctrl">
     <div class="container">
+      <br />
       <h2>{{ ctrl.h2 }}</h2>
       <!-- {{4 + 4}} -->
       <form ng-submit="ctrl.createRecipe()">
@@ -36,7 +37,7 @@
         value="Create a Recipe"
         >
       </form>
-      <table>
+      <table class="list">
          <tr ng-repeat="recipe in ctrl.recipes">
            <td ng-click="ctrl.chooseOneRecipe(recipe)">
               {{recipe.name}}
@@ -44,6 +45,7 @@
            <td ng-click="ctrl.deleteRecipe( recipe._id )">X</td>
          </tr>
        </table>
+       <br /><br />
        <div class="recipe">
          <h3> Recipe and Ingredients </h3>
          <h4>{{ctrl.recipe.name}}</h4>
