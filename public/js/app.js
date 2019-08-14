@@ -6,7 +6,7 @@ app.controller('MainController', ['$http', function ($http) {
   this.createForm = {}
   this.recipe = {}
   this.recipes = []
-  
+
   this.chooseOneRecipe = (recipe) => {
     this.recipe = recipe
     console.log(this.recipe.name)
